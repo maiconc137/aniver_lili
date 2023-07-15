@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Festa do Pijama da Princesa Barbie</title>
+  <style>
+    /* Coloque o seu CSS aqui */
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <div class="container">
+    <h1>Convite para a Festa do Pijama da Princesa Barbie</h1>
+    <img src="images/aline.jpeg" alt="Aline - Princesa Barbie">
+
+    <p>
+      Venha se divertir na festa do pijama da nossa princesa Barbie, Aline! Teremos comidinhas especiais, docinhos deliciosos e muitos jogos para animar a noite. Não perca essa oportunidade de comemorar com a pessoa mais linda do universo, que torna tudo ainda mais especial.
+    </p>
+
+    <p>
+      <strong>Data:</strong> XX de XXXX de 20XX<br>
+      <strong>Hora:</strong> XX:XX<br>
+      <strong>Local:</strong> Endereço da festa
+    </p>
+
+    <button id="confirm-button">Confirme sua presença</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS.load('particles-js', 'particles.json', function() {
+      console.log('particles.json loaded');
+    });
+    
+    document.getElementById('confirm-button').addEventListener('click', function() {
+      // Adicione aqui a animação ou ação que desejar ao confirmar a presença
+      alert('Presença confirmada!');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fef3f8;
+}
+
+header {
+  background-color: #ed64a6;
+  text-align: center;
+  padding: 40px;
+}
+
+.title {
+  margin: 0;
+  color: white;
+  font-size: 36px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.subtitle {
+  margin: 0;
+  color: #ffcee9;
+  font-size: 24px;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.details {
+  margin-bottom: 40px;
+}
+
+.details h3 {
+  color: #ed64a6;
+  font-size: 24px;
+}
+
+.details p {
+  margin-bottom: 10px;
+  color: #555555;
+}
+
+button {
+  background-color: #ed64a6;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ffcee9;
+}
+
+footer {
+  background-color: #ed64a6;
+  text-align: center;
+  padding: 40px;
+}
+
+footer img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+#animationContainer {
+  text-align: center;
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+#alineContainer {
+  position: absolute;
+  top: -300px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#alineImage {
+  max-width: 200px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.birthday-girl {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.birthday-girl h3 {
+  color: #ed64a6;
+  font-size: 24px;
+}
+
+.birthday-girl p {
+  color: #555555;
+}
+
+.show-animation {
+  animation: alineAnimation 1s ease-in-out forwards;
+}
+
+@keyframes alineAnimation {
+  0% { top: -300px; }
+  50% { top: 50px; }
+  100% { top: 0; }
+}
