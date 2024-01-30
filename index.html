@@ -1,56 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+	<head>
+		<title></title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-  <title>Convite Festa do Pijama</title>
-</head>
+		<link rel="stylesheet" href="estilo.css" />
 
-<body>
-  <header>
-    <h1 class="title">Convite para a Festa do Pijama</h1>
-    <h2 class="subtitle">Lili Barbie Princesa</h2>
-  </header>
+		<script>
+			function iniciarJogo() {
+				var nivel = document.getElementById('nivel').value
 
-  <main>
-    <section class="details">
-      <h3>Comidinhas especiais, docinhos e jogos</h3>
-      <p>Aline, a Princesa Barbie, convida você para uma festa do pijama cheia de diversão! Teremos comidinhas
-        especiais, deliciosos docinhos e jogos para animar a noite.</p>
-      <p>Venha se juntar a nós e torne essa festa ainda mais mágica!</p>
-      <button id="confirmarPresenca">Confirmar Presença</button>
-    </section>
+				if(nivel === '') {
+					alert('Selecione um nível para iniciar o jogo')
+					return false
+				}
 
-    <section id="animationContainer">
-      <div id="alineContainer">
-        <img src="images/aline.jpeg" alt="Aline - Aniversariante Lili" id="alineImage">
-      </div>
-    </section>
+				window.location.href = "app.html?" + nivel
 
-    <section class="details">
-      <h3>Cardápio:</h3>
-      <h1>Salgados</h1>
-      <p>Em breve</p>
-      <h1>Doce</h1>
-      <p>Em breve</p>
-    </section>
+			}
+		</script>
+	</head>
+	<body>
 
-    <section class="birthday-girl">
-      <h3>Aniversariante Lili, a pessoa mais linda do universo</h3>
-      <p>Hoje celebramos o aniversário da nossa querida Lili que completou seus 25 anos no dia 12/07/2023, a Princesa
-        Barbie! Ela é a pessoa mais linda do universo e
-        torna tudo ao seu redor mais especial. Sua alegria e encanto iluminam nossas vidas e essa festa será mais uma
-        ocasião para compartilhar momentos mágicos juntos.</p>
-      <p>Você é parte essencial dessa celebração. Não perca!</p>
-    </section>
-  </main>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="d-flex justify-content-center">
+						<img src="imagens/game.png" />
+					</div>
+				</div>
+			</div>
 
-  <footer>
-    <img src="images/aline.jpg" alt="Aline - Aniversariante Lili">
-  </footer>
-</body>
+			<div class="row">
+				<div class="col">
+					<div class="d-flex justify-content-center">
+						<div class="mb-2">
+							<select class="form-control" id="nivel">
+								<option value="">-- Selecione o nível --</option>
+								<option value="normal">Normal</option>
+								<option value="dificil">Difícil</option>
+								<option value="chucknorris">Chuck Norris</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
 
+
+			<div class="row">
+				<div class="col">
+					<div class="d-flex justify-content-center">
+						<button type="button" class="btn btn-danger btn-lg" onclick="iniciarJogo()" >Iniciar Jogo</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
 </html>
